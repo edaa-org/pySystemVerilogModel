@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pySVModel &mdash; pySVModel 0.5.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-reports.e44b1595f1e09d5e109d001839ba3f42.css?v=0b41afa8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/override.css?v=e6c450a4" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8e576371"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Unittest Summary Report" href="../unittests/index.html" />
+    <link rel="prev" title="Module" href="../LanguageModel/Module.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference external" href="https://edaa-org.github.io/">Used as a layer of EDA² ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation/Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Dependency.html">Dependencies</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../LanguageModel/index.html">SystemVerilog Language Model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References and Reports</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Class Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pySVModel.SystemVerilogVersion"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.Any"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.Any</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.Verilog95"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.Verilog95</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.Verilog2001"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.Verilog2001</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.Verilog2005"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.Verilog2005</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.SystemVerilog2005"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.SystemVerilog2005</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.SystemVerilog2009"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.SystemVerilog2009</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.SystemVerilog2012"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.SystemVerilog2012</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.SystemVerilog2017"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.SystemVerilog2017</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.Latest"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.Latest</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__VERSION_MAPPINGS__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__VERSION_MAPPINGS__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__init__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.Parse"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.Parse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__lt__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__lt__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__le__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__le__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__gt__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__gt__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__ge__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__ge__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__ne__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__ne__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__eq__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__eq__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.IsVerilog"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.IsVerilog</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.IsSystemVerilog"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.IsSystemVerilog</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__str__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__str__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__repr__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__repr__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__contains__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__contains__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__getitem__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__getitem__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__iter__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__iter__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pySVModel.SystemVerilogVersion.__len__"><code class="docutils literal notranslate"><span class="pre">SystemVerilogVersion.__len__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../unittests/index.html">Unittest Summary Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coverage/index.html">Code Coverage Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocCoverage.html">Doc. Coverage Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../typing/index.html">Static Type Check Report ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../License.html">Apache License 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Doc-License.html">Creative Commons Attribution 4.0 International</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py-modindex.html">Python Module Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TODO.html">TODOs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pySVModel</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pySVModel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pySVModel/pySVModel.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <style type="text/css">
+  span.bolditalic {font-weight: bold; font-style: italic; }
+  span.underline {text-decoration: underline; }
+  span.strike {text-decoration: line-through; }
+  span.xlarge {font-size: x-large; }
+  span.colorred {color: #CC0000; }
+  span.colorgreen {color: #009933; }
+  span.colorblue {color: #0066FF; }
+  span.colorpurple {color: #9900CC; }
+</style><section id="module-pySVModel">
+<span id="pysvmodel"></span><h1>pySVModel<a class="headerlink" href="#module-pySVModel" title="Link to this heading"></a></h1>
+<p>An abstract SystemVerilog language model.</p>
+<p>This package provides a unified abstract language model for SystemVerilog. Projects reading from source files can derive
+own classes and implement additional logic to create a concrete language model for their tools.</p>
+<p>Projects consuming pre-processed SystemVerilog data can build higher level features and services on such a model, while
+supporting multiple frontends.</p>
+<div class="admonition-copyright-information admonition">
+<p class="admonition-title">Copyright Information</p>
+<dl class="field-list simple">
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Copyright 2021-2025 Patrick Lehmann - Bötzingen, Germany</p>
+</dd>
+<dt class="field-even">license<span class="colon">:</span></dt>
+<dd class="field-even"><p>Apache License, Version 2.0</p>
+</dd>
+</dl>
+</div>
+<p><strong>Classes</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>:
+An enumeration for all possible version numbers for (System)Verilog.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Classes</strong></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pySVModel.</span></span><span class="sig-name descname"><span class="pre">SystemVerilogVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion" title="Link to this definition"></a></dt>
+<dd><p>An enumeration for all possible version numbers for (System)Verilog.</p>
+<p>A version can be given as integer or string and is represented as a unified
+enumeration value.</p>
+<p>This enumeration supports compare operators.</p>
+<p class="rubric">Inheritance</p>
+<div class="graphviz"><object data="../_images/inheritance-18d791c39256394fed9a490b5ba84147e13a5d21.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of SystemVerilogVersion</p></object></div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.Any">
+<span class="sig-name descname"><span class="pre">Any</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.Any" title="Link to this definition"></a></dt>
+<dd><p>Any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.Verilog95">
+<span class="sig-name descname"><span class="pre">Verilog95</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">95</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.Verilog95" title="Link to this definition"></a></dt>
+<dd><p>Verilog-1995</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.Verilog2001">
+<span class="sig-name descname"><span class="pre">Verilog2001</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.Verilog2001" title="Link to this definition"></a></dt>
+<dd><p>Verilog-2001</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.Verilog2005">
+<span class="sig-name descname"><span class="pre">Verilog2005</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.Verilog2005" title="Link to this definition"></a></dt>
+<dd><p>Verilog-2005</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.SystemVerilog2005">
+<span class="sig-name descname"><span class="pre">SystemVerilog2005</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2005</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.SystemVerilog2005" title="Link to this definition"></a></dt>
+<dd><p>SystemVerilog-2005</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.SystemVerilog2009">
+<span class="sig-name descname"><span class="pre">SystemVerilog2009</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2009</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.SystemVerilog2009" title="Link to this definition"></a></dt>
+<dd><p>SystemVerilog-2009</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.SystemVerilog2012">
+<span class="sig-name descname"><span class="pre">SystemVerilog2012</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2012</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.SystemVerilog2012" title="Link to this definition"></a></dt>
+<dd><p>SystemVerilog-2012</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.SystemVerilog2017">
+<span class="sig-name descname"><span class="pre">SystemVerilog2017</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2017</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.SystemVerilog2017" title="Link to this definition"></a></dt>
+<dd><p>SystemVerilog-2017</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.Latest">
+<span class="sig-name descname"><span class="pre">Latest</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10000</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.Latest" title="Link to this definition"></a></dt>
+<dd><p>Latest Systemverilog (2017)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__VERSION_MAPPINGS__">
+<span class="sig-name descname"><span class="pre">__VERSION_MAPPINGS__</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a><span class="pre">],</span> <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'01':</span> <span class="pre">1,</span> <span class="pre">'05':</span> <span class="pre">5,</span> <span class="pre">'09':</span> <span class="pre">2009,</span> <span class="pre">'12':</span> <span class="pre">2012,</span> <span class="pre">'17':</span> <span class="pre">2017,</span> <span class="pre">'1995':</span> <span class="pre">95,</span> <span class="pre">'2001':</span> <span class="pre">1,</span> <span class="pre">'2005':</span> <span class="pre">2005,</span> <span class="pre">'2009':</span> <span class="pre">2009,</span> <span class="pre">'2012':</span> <span class="pre">2012,</span> <span class="pre">'2017':</span> <span class="pre">2017,</span> <span class="pre">'95':</span> <span class="pre">95,</span> <span class="pre">'Any':</span> <span class="pre">Any,</span> <span class="pre">'Latest':</span> <span class="pre">Latest,</span> <span class="pre">-1:</span> <span class="pre">Any,</span> <span class="pre">1:</span> <span class="pre">1,</span> <span class="pre">10000:</span> <span class="pre">Latest,</span> <span class="pre">12:</span> <span class="pre">2012,</span> <span class="pre">17:</span> <span class="pre">2017,</span> <span class="pre">1995:</span> <span class="pre">95,</span> <span class="pre">2001:</span> <span class="pre">1,</span> <span class="pre">2005:</span> <span class="pre">2005,</span> <span class="pre">2009:</span> <span class="pre">2009,</span> <span class="pre">2012:</span> <span class="pre">2012,</span> <span class="pre">2017:</span> <span class="pre">2017,</span> <span class="pre">5:</span> <span class="pre">5,</span> <span class="pre">9:</span> <span class="pre">2009,</span> <span class="pre">95:</span> <span class="pre">95}</span></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__VERSION_MAPPINGS__" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of (System)Verilog year codes variants as integer and strings for mapping to unique enum values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__init__" title="Link to this definition"></a></dt>
+<dd><p>Patch the embedded MAP dictionary</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.Parse">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.Parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.Parse" title="Link to this definition"></a></dt>
+<dd><p>Parses a (System)Verilog year code as integer or string to an enum value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</span>) – (System)Verilog year code.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enumeration value.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the year code is not recognized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__lt__">
+<span class="sig-name descname"><span class="pre">__lt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__lt__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__lt__" title="Link to this definition"></a></dt>
+<dd><p>Compare two (System)Verilog versions if the version is less than the second operand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type">-1</span>) – Parameter to compare against.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is less than the second operand.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If parameter <code class="docutils literal notranslate"><span class="pre">other</span></code> is not of type <a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__le__">
+<span class="sig-name descname"><span class="pre">__le__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__le__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__le__" title="Link to this definition"></a></dt>
+<dd><p>Compare two (System)Verilog versions if the version is less or equal than the second operand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type">-1</span>) – Parameter to compare against.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is less or equal than the second operand.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If parameter <code class="docutils literal notranslate"><span class="pre">other</span></code> is not of type <a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__gt__">
+<span class="sig-name descname"><span class="pre">__gt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__gt__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__gt__" title="Link to this definition"></a></dt>
+<dd><p>Compare two (System)Verilog versions if the version is greater than the second operand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type">-1</span>) – Parameter to compare against.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is greater than the second operand.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If parameter <code class="docutils literal notranslate"><span class="pre">other</span></code> is not of type <a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__ge__">
+<span class="sig-name descname"><span class="pre">__ge__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__ge__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__ge__" title="Link to this definition"></a></dt>
+<dd><p>Compare two (System)Verilog versions if the version is greater or equal than the second operand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type">-1</span>) – Parameter to compare against.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is greater or equal than the second operand.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If parameter <code class="docutils literal notranslate"><span class="pre">other</span></code> is not of type <a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__ne__">
+<span class="sig-name descname"><span class="pre">__ne__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__ne__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__ne__" title="Link to this definition"></a></dt>
+<dd><p>Compare two (System)Verilog versions if the version is unequal to the second operand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type">-1</span>) – Parameter to compare against.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is unequal to the second operand.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If parameter <code class="docutils literal notranslate"><span class="pre">other</span></code> is not of type <a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__eq__">
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__eq__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__eq__" title="Link to this definition"></a></dt>
+<dd><p>Compare two (System)Verilog versions if the version is equal to the second operand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type">-1</span>) – Parameter to compare against.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is equal to the second operand.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If parameter <code class="docutils literal notranslate"><span class="pre">other</span></code> is not of type <a class="reference internal" href="#pySVModel.SystemVerilogVersion" title="pySVModel.SystemVerilogVersion"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemVerilogVersion</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.IsVerilog">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsVerilog</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.IsVerilog" title="Link to this definition"></a></dt>
+<dd><p>Checks if the version is a (classic) Verilog version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is a (classic) Verilog version.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.IsSystemVerilog">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsSystemVerilog</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#pySVModel.SystemVerilogVersion.IsSystemVerilog" title="Link to this definition"></a></dt>
+<dd><p>Checks if the version is a SystemVerilog version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if version is a SystemVerilog version.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__str__" title="Link to this definition"></a></dt>
+<dd><p>Formats the SystemVerilog version to pattern <code class="docutils literal notranslate"><span class="pre">SV'xx</span></code> or in case of classic Verilog to <code class="docutils literal notranslate"><span class="pre">Verilog'xx</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Formatted (System)Verilog version.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pySVModel.html#SystemVerilogVersion.__repr__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Formats the (System)Verilog version to pattern <code class="docutils literal notranslate"><span class="pre">xxxx</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Formatted (System)Verilog version.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__contains__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__contains__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__contains__" title="Link to this definition"></a></dt>
+<dd><p>Return True if <cite>value</cite> is in <cite>cls</cite>.</p>
+<p><cite>value</cite> is in <cite>cls</cite> if:
+1) <cite>value</cite> is a member of <cite>cls</cite>, or
+2) <cite>value</cite> is the value of one of the <cite>cls</cite>’s members.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__getitem__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__getitem__" title="Link to this definition"></a></dt>
+<dd><p>Return the member matching <cite>name</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__iter__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__iter__" title="Link to this definition"></a></dt>
+<dd><p>Return members in definition order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pySVModel.SystemVerilogVersion.__len__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pySVModel.SystemVerilogVersion.__len__" title="Link to this definition"></a></dt>
+<dd><p>Return the number of members (no aliases)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../LanguageModel/Module.html" class="btn btn-neutral float-left" title="Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../unittests/index.html" class="btn btn-neutral float-right" title="Unittest Summary Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2025, Patrick Lehmann.
+      <span class="lastupdated">Last updated on 24.02.2025.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
